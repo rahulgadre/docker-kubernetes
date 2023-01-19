@@ -1,0 +1,9 @@
+# Pull the minimal Ubuntu image
+FROM ubuntu
+
+# Install Nginx
+RUN apt-get -y update && apt-get -y install nginx
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
